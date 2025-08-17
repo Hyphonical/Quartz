@@ -1,10 +1,8 @@
 ---
 title: Frequently Asked Questions
-description: Answers to common Void Tales player questions.
-socialDescription: FAQ for the Void Tales Minecraft server.
+description: "Answers to common Void Tales player questions."
+socialDescription: "FAQ for the Void Tales Minecraft server."
 permalink: /faq
-aliases:
-  - /questions
 lang: en
 draft: false
 enableToc: false
@@ -12,8 +10,6 @@ tags:
   - faq
   - help
   - support
-created: 2025-08-17
-modified: 2025-08-17
 ---
 # Frequently Asked Questions
 

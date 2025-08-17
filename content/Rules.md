@@ -1,10 +1,8 @@
 ---
 title: Server Rules
-description: Community rules for the Void Tales Minecraft server.
-socialDescription: Community rules for the Void Tales Minecraft server.
+description: "Community rules for the Void Tales Minecraft server."
+socialDescription: "Community rules for the Void Tales Minecraft server."
 permalink: /rules
-aliases:
-  - /server-rules
 lang: en
 draft: false
 enableToc: false
@@ -12,8 +10,6 @@ tags:
   - rules
   - community
   - moderation
-created: 2025-08-17
-modified: 2025-08-17
 ---
 # Server Rules
 
