@@ -4,8 +4,13 @@ export default (() => {
   function SpeedInsights(_: QuartzComponentProps) {
     return (
       <script
-        src="https://vitals.vercel-insights.com/v1/speed-insights.js"
-        defer
+        type="module"
+        dangerouslySetInnerHTML={{
+          __html: `
+import { injectSpeedInsights } from "https://esm.sh/@vercel/speed-insights";
+injectSpeedInsights({ sampleRate: 1 });
+`,
+        }}
       ></script>
     )
   }
