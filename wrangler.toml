@@ -1,5 +1,4 @@
 name = "quartz"
-main = "dist/index.js"
 compatibility_date = "2025-08-18"
 
 [site]
