@@ -2,7 +2,7 @@ body {
   /* Fallback color plus image with a soft light overlay */
   background:
     linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)),
-    url("/images/background-light.jpg") center / cover fixed no-repeat;
+    url("/static/images/background-light.jpg") center / cover fixed no-repeat;
   background-attachment: fixed;
   background-color: #f5f5f5;
 }
@@ -10,7 +10,7 @@ body {
 :root[saved-theme="dark"] body {
   background:
     linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-    url("/images/background-dark.jpg") center / cover fixed no-repeat;
+    url("/static/images/background-dark.jpg") center / cover fixed no-repeat;
   background-color: #0d1117;
 }
 
