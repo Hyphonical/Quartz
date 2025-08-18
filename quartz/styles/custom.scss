@@ -1,15 +1,38 @@
 @use "./base.scss";
 
+/* Custom styles for the Quartz theme */
+
+/* Normal modifications of default elements */
+
+:root {
+  --accent: #936bd0;
+  --accent-light: #b78de5;
+  --accent-soft: color-mix(in srgb, var(--accent) 25%, transparent);
+  --accent-radial: radial-gradient(circle at 30% 20%, var(--accent-soft), transparent 70%);
+}
+
+a {
+  text-decoration: none;
+  background:
+    linear-gradient(currentColor 0 0) 0 100% / 0 2px no-repeat;
+  transition: background-size .35s ease, color .25s;
+  color: var(--accent-light);
+}
+
+a:hover {
+  background-size: 100% 2px;
+  color: var(--accent);
+}
+
 .page > #quartz-body .center > article {
   animation: fadeIn 0.7s ease;
+  background-image: var(--accent-radial);
 }
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px);}
   to { opacity: 1; transform: none;}
 }
-
-/* Normal modifications of default elements */
 
 .page > #quartz-body .center > article {
   background: rgba(255,255,255,0.85);
@@ -84,4 +107,10 @@ body[data-slug="Commands"] {
   background:
     linear-gradient(rgba(10,5,25,0.6), rgba(10,5,25,0.6)),
     url("/static/images/background-dark.jpg") center / cover fixed no-repeat !important;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root[saved-theme] body {
+    transition: background-color .5s, background-image .6s;
+  }
 }

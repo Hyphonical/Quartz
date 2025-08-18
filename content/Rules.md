@@ -11,7 +11,6 @@ tags:
   - community
   - moderation
 ---
-# Server Rules
 
 At Void Tales, our rules are the foundation of a welcoming and adventurous community. By following these guidelines, you help ensure the realm remains a safe, fun, and magical place for all.
 

@@ -11,4 +11,3 @@ tags:
   - story
   - worldbuilding
 ---
-# Lore

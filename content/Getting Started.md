@@ -11,4 +11,3 @@ tags:
   - getting-started
   - new-players
 ---
-# Getting Started

@@ -11,4 +11,3 @@ tags:
   - community
   - help
 ---
-# Support

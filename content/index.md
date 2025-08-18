@@ -1,5 +1,5 @@
 ---
-title: Void Tales Wiki
+title: Welcome to Void Tales Wiki!
 description: "Official wiki hub for the Void Tales Minecraft server: rules, lore, guides, commands, FAQ, and community links."
 socialDescription: "Official wiki hub for the Void Tales Minecraft server."
 lang: en
@@ -11,7 +11,6 @@ tags:
   - void-tales
   - guide
 ---
-# Welcome to Void Tales Wiki!
 
 Welcome to the official wiki for **[Void Tales](https://voidtales.win)**, a unique Minecraft server adventure! 🍃
 Here you'll find everything you need to get started, explore the world, and join our community.

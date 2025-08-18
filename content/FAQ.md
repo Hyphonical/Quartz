@@ -11,7 +11,6 @@ tags:
   - help
   - support
 ---
-# Frequently Asked Questions
 
 **Q: What version is the server?**  
 A: Void Tales runs on Minecraft Java Edition version `1.21.1`.
