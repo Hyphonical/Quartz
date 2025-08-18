@@ -5,28 +5,37 @@
 /* Normal modifications of default elements */
 
 :root {
-  --accent: #936bd0;
-  --accent-light: #b78de5;
-  --accent-soft: color-mix(in srgb, var(--accent) 25%, transparent);
-  --accent-radial: radial-gradient(circle at 30% 20%, var(--accent-soft), transparent 70%);
+  --accent-light-mode: #936bd0;
+  --accent-dark-mode: #936bd0; /* The same as light mode ¯\_(ツ)_/¯ */
 }
+
+/* Link styles | Light mode */
 
 a {
   text-decoration: none;
   background:
     linear-gradient(currentColor 0 0) 0 100% / 0 2px no-repeat;
   transition: background-size .35s ease, color .25s;
-  color: var(--accent-light);
+  color: var(--accent-light-mode);
 }
 
 a:hover {
   background-size: 100% 2px;
-  color: var(--accent);
+  color: var(--accent-light-mode);
+}
+
+/* Link styles | Dark mode */
+
+:root[saved-theme="dark"] a {
+  color: var(--accent-dark-mode);
+}
+
+:root[saved-theme="dark"] a:hover {
+  color: var(--accent-dark-mode);
 }
 
 .page > #quartz-body .center > article {
   animation: fadeIn 0.7s ease;
-  background-image: var(--accent-radial);
 }
 
 @keyframes fadeIn {
@@ -80,37 +89,51 @@ a:hover {
 /* Global Light/Dark mode variants */
 
 body {
-    background:
-    linear-gradient(rgba(255,240,200,0.55), rgba(255,240,200,0.55)),
-      url("/static/images/background-light.jpg") center / cover fixed no-repeat;
+  background:
+    linear-gradient(rgba(255, 240, 225, 0.55), rgba(255, 240, 225, 0.55)),
+    url("/static/images/index-light.webp") center / cover fixed no-repeat;
+    backdrop-filter: blur(2px);
 }
 
 :root[saved-theme="dark"] body {
   background:
     linear-gradient(rgba(10,5,25,0.6), rgba(10,5,25,0.6)),
-    url("/static/images/background-dark.jpg") center / cover fixed no-repeat;
+    url("/static/images/index-dark.webp") center / cover fixed no-repeat;
+    backdrop-filter: blur(2px);
 }
 
 /* Page-specific backgrounds */
 
 /* Light mode variants */
 
+body[data-slug="Rules"] {
+  background:
+    url("/static/images/rules-light.webp") center / cover fixed no-repeat !important;
+}
+
 body[data-slug="Commands"] {
   background:
-    linear-gradient(rgba(255,240,200,0.55), rgba(255,240,200,0.55)),
-    url("/static/images/background-light.jpg") center / cover fixed no-repeat !important;
+    url("/static/images/commands-light.webp") center / cover fixed no-repeat !important;
+}
+
+body[data-slug="Lore"] {
+  background:
+    url("/static/images/lore-light.webp") center / cover fixed no-repeat !important;
 }
 
 /* Dark mode variants */
 
-:root[saved-theme="dark"] body[data-slug="Commands"] {
+:root[saved-theme="dark"] body[data-slug="Rules"] {
   background:
-    linear-gradient(rgba(10,5,25,0.6), rgba(10,5,25,0.6)),
-    url("/static/images/background-dark.jpg") center / cover fixed no-repeat !important;
+    url("/static/images/rules-dark.webp") center / cover fixed no-repeat !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  :root[saved-theme] body {
-    transition: background-color .5s, background-image .6s;
-  }
+:root[saved-theme="dark"] body[data-slug="Commands"] {
+  background:
+    url("/static/images/commands-dark.webp") center / cover fixed no-repeat !important;
+}
+
+:root[saved-theme="dark"] body[data-slug="Lore"] {
+  background:
+    url("/static/images/lore-dark.webp") center / cover fixed no-repeat !important;
 }
