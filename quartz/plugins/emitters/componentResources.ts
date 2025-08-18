@@ -5,6 +5,7 @@ import { QuartzEmitterPlugin } from "../types"
 import spaRouterScript from "../../components/scripts/spa.inline"
 // @ts-ignore
 import popoverScript from "../../components/scripts/popover.inline"
+import vercelSpeedScript from "../../components/scripts/vercelSpeed.inline"
 import styles from "../../styles/custom.scss"
 import popoverStyle from "../../components/styles/popover.scss"
 import { BuildCtx } from "../../util/ctx"
@@ -229,6 +230,8 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
       document.head.appendChild(matomoScript);
     `)
   }
+
+  componentResources.afterDOMLoaded.push(vercelSpeedScript)
 
   if (cfg.enableSPA) {
     componentResources.afterDOMLoaded.push(spaRouterScript)
