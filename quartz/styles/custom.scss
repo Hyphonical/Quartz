@@ -1,3 +1,38 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+
+// Optional: keep other overrides above
+body {
+  /* Fallback color plus image with a soft light overlay */
+  background:
+    linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)),
+    url("/images/background-light.jpg") center / cover fixed no-repeat;
+  background-attachment: fixed;
+  background-color: #f5f5f5;
+}
+
+:root[saved-theme="dark"] body {
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("/images/background-dark.jpg") center / cover fixed no-repeat;
+  background-color: #0d1117;
+}
+
+.page > #quartz-body .center > article {
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+:root[saved-theme="dark"] .page > #quartz-body .center > article {
+  background: rgba(13,17,23,0.8);
+}
+
+/* Optional: make large overlays (search / graph) transparent if you want image visible */
+.search-container.active,
+.global-graph-outer.active {
+  background: transparent;
+  backdrop-filter: blur(4px);
+}
