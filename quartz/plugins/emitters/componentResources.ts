@@ -7,6 +7,8 @@ import spaRouterScript from "../../components/scripts/spa.inline"
 import popoverScript from "../../components/scripts/popover.inline"
 // @ts-ignore
 import vercelSpeedScript from "../../components/scripts/vercelSpeed.inline"
+// @ts-ignore
+import vercelAnalytics from "../../components/scripts/vercelAnalytics.inline"
 import styles from "../../styles/custom.scss"
 import popoverStyle from "../../components/styles/popover.scss"
 import { BuildCtx } from "../../util/ctx"
@@ -233,6 +235,7 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
   }
 
   componentResources.afterDOMLoaded.push(vercelSpeedScript)
+  componentResources.afterDOMLoaded.push(vercelAnalytics)
 
   if (cfg.enableSPA) {
     componentResources.afterDOMLoaded.push(spaRouterScript)
