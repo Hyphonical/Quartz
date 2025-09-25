@@ -9,3 +9,7 @@ tsconfig.tsbuildinfo
 private/
 .replit
 replit.nix
+.github/workflows/build-preview.yaml
+.github/workflows/ci.yaml
+.github/workflows/deploy-preview.yaml
+.github/workflows/docker-build-push.yaml
