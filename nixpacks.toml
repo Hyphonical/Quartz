@@ -1,5 +1,8 @@
+[phases.setup]
+nixPkgs = ["nginx"]
+
 [phases.build]
 cmds = ["npx quartz build"] # Runs the build script
 
-[phases.start]
+[start]
 cmds = ["nginx -g 'daemon off;'"]
