@@ -22,4 +22,7 @@ The resource pack is bundled with the modpack.
 **Q: How do I join the Discord?**  
 A: [Click here to join](https://discord.gg/Am9eZ9aPUu).
 
+**Q: Test?**  
+A: Yeeeah Test..
+
 *Still have questions? Ask a staff member on Discord!*
