@@ -1,8 +1,11 @@
 [phases.setup]
-nixPkgs = ["nginx"]
+nixPkgs = ["nodejs_22", "npm", "nginx"]
+
+[phases.install]
+cmds = ["npm ci"]
 
 [phases.build]
-cmds = ["npx quartz build"] # Runs the build script
+cmds = ["npx quartz build"]
 
 [start]
 cmds = ["nginx -g 'daemon off;'"]
